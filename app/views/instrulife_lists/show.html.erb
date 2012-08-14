@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Productlijsten Instrulife</h1>
+<table>
+	<tr>
+  		<th>Naam:</th>
+		<th>GeUpload op:</th>
+	</tr>
+
+  	<tr>
+		<td><%= @instrulife_list.name %></td>
+		<td><%= @instrulife_list.created_at%></td>
+	</tr>
+
+
+
+
+<%= link_to 'Edit', edit_instrulife_list_path(@instrulife_list) %> |
+<%= link_to 'Back', instrulife_lists_path %>

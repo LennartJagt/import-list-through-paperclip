@@ -1,0 +1,24 @@
+<h1>Listing instrulife_lists</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @instrulife_lists.each do |instrulife_list| %>
+  <tr>
+    <td><%= instrulife_list.name %></td>
+    <td><%= link_to 'Show', instrulife_list %></td>
+    <td><%= link_to 'Edit', edit_instrulife_list_path(instrulife_list) %></td>
+    <td><%= link_to 'Destroy', instrulife_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<td><%= link_to 'Import', import_products_path(:id => instrulife_list.id) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Instrulife list', new_instrulife_list_path %>
